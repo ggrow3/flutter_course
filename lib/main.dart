@@ -1,12 +1,35 @@
 import 'package:flutter/material.dart';
 
-main() {
-  runApp(MyApp());
-}
+void main() => runApp(MyApp());
+
 
 class MyApp extends StatelessWidget {
-  build(context) {
+  @override
+  Widget build(BuildContext context) {
     return MaterialApp(
-        home: Scaffold(appBar: AppBar(title: Text('Easy List'))));
+        home: Scaffold(
+          appBar: AppBar(
+            title: Text('Easy List')
+            ),
+            body: Column(children: [
+              RaisedButton(
+                
+                onPressed:() {},
+                child: Text('Add Products'),
+              
+               ),
+              Card(child: Column(
+                children: <Widget>[
+                  Image.asset('assets/food.jpg'),
+                  Text("Food Paradise!")
+
+                ],
+              ),
+            ), 
+            
+            ]
+            ),
+            ));
+
   }
 }
